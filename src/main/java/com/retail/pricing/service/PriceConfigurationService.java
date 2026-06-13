@@ -20,7 +20,7 @@ public class PriceConfigurationService {
     private final PriceConfigurationRepository priceConfigRepository;
     private final ProductRepository productRepository;
 
-    @Transactional(isolation = Isolation.SERIALIZABLE, rollbackFor = Exception.class)
+    @Transactional(isolation = Isolation.READ_COMMITTED, rollbackFor = Exception.class)
     public PriceConfiguration addOrUpdate(PriceConfigurationRequest request) {
         Product product = productRepository.findById(request.getProductId())
                 .orElseThrow(() -> new RuntimeException("Product not found: " + request.getProductId()));
