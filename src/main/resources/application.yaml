@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: pricing
+  datasource:
+    url: jdbc:h2:mem:pricingdb
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  defer-datasource-initialization: true
+  sql:
+    init:
+      mode: never
+  h2:
+    console:
+      enabled: true

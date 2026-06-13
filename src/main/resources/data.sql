@@ -1,0 +1,2 @@
+-- Price configuration seed data must reference an existing product.
+-- Use POST /api/products first, then PUT /api/price-configurations/products/{id} to seed via API.
