@@ -18,7 +18,6 @@ public class SalesSteps {
         this.productSteps = productSteps;
     }
 
-    @Given("I record a sale for the product with quantity {int} on date {string}")
     @When("I record a sale for the product with quantity {int} on date {string}")
     public void iRecordASale(int quantity, String date) {
         response = given()

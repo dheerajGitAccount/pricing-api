@@ -17,7 +17,6 @@ public class PriceConfigurationSteps {
         this.productSteps = productSteps;
     }
 
-    @Given("I add a price configuration with price {double} currency {string} from {string} to {string}")
     @When("I add a price configuration with price {double} currency {string} from {string} to {string}")
     public void iAddAPriceConfiguration(double price, String currency, String startDate, String endDate) {
         String body = String.format(
